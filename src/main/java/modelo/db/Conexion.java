@@ -37,4 +37,15 @@ public class Conexion {
         return jdbcConexion;
     }
 
+    public static void desconectar() {
+
+        try {
+            if (!jdbcConexion.isClosed() || jdbcConexion != null) {
+                jdbcConexion = null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
