@@ -19,6 +19,7 @@ public class Consola {
         sb.append(" =============================\n");
         sb.append("Opción: ");
         System.out.println(sb.toString());
+        System.out.println("Hola");
     }
 
     public static int leerOpcion() {
