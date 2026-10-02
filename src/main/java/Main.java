@@ -1,3 +1,4 @@
+import static control.Accion.realizarAccion;
 import static vista.Consola.leerOpcion;
 import static vista.Consola.mostrarMenu;
 
@@ -9,8 +10,10 @@ public class Main {
         mostrarMenu();
         int opcion;
         while ((opcion = leerOpcion()) != 0) {
-
+            realizarAccion(opcion);
+            System.out.println("");
             mostrarMenu();
+
         }
     }
 }

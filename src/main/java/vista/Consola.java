@@ -1,5 +1,8 @@
 package vista;
 
+import modelo.Escuderia;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Consola {
@@ -14,10 +17,15 @@ public class Consola {
         sb.append("3. Seleccionar escuderia\n");
         sb.append("0. Salir\n");
         sb.append(" =============================\n");
-        System.out.println(sb.toString() + "\n");
+        sb.append("Opción: ");
+        System.out.println(sb.toString());
     }
 
     public static int leerOpcion() {
         return sc.nextInt();
+    }
+
+    public static void mostrarEscuderias(List<Escuderia> escuderias) {
+        escuderias.forEach(System.out::println);
     }
 }
