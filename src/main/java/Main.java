@@ -11,10 +11,10 @@ public class Main {
         int opcion;
         while ((opcion = leerOpcion()) != 0) {
             realizarAccion(opcion);
-            System.out.println("");
+            System.out.println();
             mostrarMenu();
-
         }
+        System.out.println("Saliendo del programa...");
     }
 }
 

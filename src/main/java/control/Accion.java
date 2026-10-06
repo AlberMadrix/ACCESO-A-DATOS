@@ -1,5 +1,7 @@
 package control;
 
+import java.util.InputMismatchException;
+
 import static modelo.db.EscuderiaDB.consultarEscuderias;
 import static vista.Consola.mostrarEscuderias;
 
@@ -11,8 +13,6 @@ public class Accion {
           //  case 2 -> // TODO: BORRAR ESCUDERIA
             case 3 -> mostrarEscuderias(consultarEscuderias());
             default -> System.out.println("Opción incorrecta");
-
-
         }
     }
 }

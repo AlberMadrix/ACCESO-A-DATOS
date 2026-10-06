@@ -2,6 +2,7 @@ package vista;
 
 import modelo.Escuderia;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,11 +20,17 @@ public class Consola {
         sb.append(" =============================\n");
         sb.append("Opción: ");
         System.out.println(sb.toString());
-        System.out.println("Hola");
     }
 
     public static int leerOpcion() {
-        return sc.nextInt();
+        int opcion;
+        try {
+           opcion = sc.nextInt();
+        } catch (InputMismatchException e) {
+            opcion = -1;
+            sc.nextLine();
+        }
+        return opcion;
     }
 
     public static void mostrarEscuderias(List<Escuderia> escuderias) {
